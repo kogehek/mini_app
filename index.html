@@ -86,7 +86,17 @@
 
     <script>
         let tg = window.Telegram.WebApp;
-        alert(Telegram.WebApp.initData);
+        const user = window.Telegram.WebApp.initDataUnsafe.user;
+
+        if (user) {
+            alert("ID пользователя:", user.id);
+            alert("Имя пользователя:", user.first_name);
+            alert("Фамилия пользователя:", user.last_name);
+            alert("Имя пользователя в Telegram:", user.username);
+            alert("URL фото профиля:", user.photo_url);
+        } else {
+            console.log("Информация о пользователе недоступна.");
+        }
         let fBtn = document.getElementsByClassName("f-btn")[0]
         let sBtn = document.getElementsByClassName("s-btn")[0]
 
