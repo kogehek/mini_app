@@ -105,11 +105,22 @@
 	<div style="
 	    position: absolute;
 	    z-index: 100000000000;
-	">AAAAAAAAAXXXXX</div>
+	">user</div>
     
 	<script>
 
     (function() {
+	const telegram = window.Telegram.WebApp;
+
+	// Извлекаем данные пользователя
+	const user = telegram.initDataUnsafe.user;
+	
+	if (user) {
+	    console.log("User ID:", user.id);       // Здесь вы можете использовать user.id
+	    console.log("User Name:", user.username); // Имя пользователя, если нужно
+	} else {
+	    console.log("User data not available");
+	}
         //Initialization
         var game = new gdjs.RuntimeGame(gdjs.projectData, {});
 
