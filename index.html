@@ -87,7 +87,7 @@
     <script>
         let tg = window.Telegram.WebApp;
         const user = window.Telegram.WebApp.initDataUnsafe.user;
-
+        alert(user);
         if (user) {
             alert("ID пользователя:", user.id);
             alert("Имя пользователя:", user.first_name);
