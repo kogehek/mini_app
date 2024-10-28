@@ -70,7 +70,7 @@
 </head>
 <body>
     <div class="Main">
-        <h1>Тестовое приложение1</h1>
+        <h1>Тестовое приложение2</h1>
         <img src="{{ url_for('static', filename='bot.png') }}" alt="">
         <p></p>
         <button class="btn f-btn">Тест отправки данных</button>
@@ -90,7 +90,7 @@
         const user = window.Telegram.WebApp.initDataUnsafe.user;
         alert(JSON.stringify(user));
         if (user) {
-            alert("ID пользователя:", user.id);
+            alert("ID пользователя:", user.['id']);
             alert("Имя пользователя:", user.first_name);
             alert("Фамилия пользователя:", user.last_name);
             alert("Имя пользователя в Telegram:", user.username);
