@@ -70,7 +70,7 @@
 </head>
 <body>
     <div class="Main">
-        <h1>Тестовое приложение3</h1>
+        <h1>Тестовое приложение33</h1>
         <img src="{{ url_for('static', filename='bot.png') }}" alt="">
         <p></p>
         <button class="btn f-btn">Тест отправки данных</button>
@@ -83,8 +83,9 @@
     </form>
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
     <script>
+        eruda.init();
         window.Telegram.WebApp.ready();
 
         fetch("https://c79e-212-98-168-98.ngrok-free.app/verify-user", {
